@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Favimoji</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="popupTitle">Favimoji</h1>
+      <form id="add-form" autocomplete="off">
+        <div class="fields">
+          <label class="field field-pattern">
+            <span data-i18n="patternLabel">URL pattern</span>
+            <input
+              id="pattern-input"
+              type="text"
+              data-i18n-placeholder="patternPlaceholder"
+              required
+            />
+          </label>
+          <label class="field field-emoji">
+            <span data-i18n="emojiLabel">Emoji</span>
+            <input
+              id="emoji-input"
+              type="text"
+              data-i18n-placeholder="emojiPlaceholder"
+              required
+            />
+          </label>
+        </div>
+        <button type="submit" data-i18n="addRule">Add</button>
+      </form>
+      <p class="hint" data-i18n="patternHint">
+        First matching rule wins. Use * as a wildcard.
+      </p>
+      <ul id="rule-list"></ul>
+      <p id="empty-state" data-i18n="emptyState" hidden>
+        No rules yet. Add a pattern and an emoji above.
+      </p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

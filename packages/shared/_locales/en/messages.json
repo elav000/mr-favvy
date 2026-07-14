@@ -1,0 +1,13 @@
+{
+  "extName": { "message": "Favimoji" },
+  "extDescription": { "message": "Replace any website's favicon with an emoji of your choice, per URL pattern." },
+  "popupTitle": { "message": "Favimoji" },
+  "patternLabel": { "message": "URL pattern" },
+  "patternPlaceholder": { "message": "example.com or example.com/path" },
+  "emojiLabel": { "message": "Emoji" },
+  "emojiPlaceholder": { "message": "🙂" },
+  "addRule": { "message": "Add" },
+  "deleteRule": { "message": "Delete rule" },
+  "patternHint": { "message": "First matching rule wins. Use * as a wildcard." },
+  "emptyState": { "message": "No rules yet. Add a pattern and an emoji above." }
+}

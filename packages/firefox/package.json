@@ -1,0 +1,19 @@
+{
+  "name": "@favimoji/firefox",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Firefox extension that replaces website favicons with emojis based on URL patterns.",
+  "scripts": {
+    "build": "tsx build.ts",
+    "dev": "tsx build.ts && (tsx build.ts --watch & web-ext run --source-dir=dist)",
+    "lint": "web-ext lint --source-dir=dist",
+    "package": "web-ext build"
+  },
+  "dependencies": {
+    "@favimoji/shared": "*"
+  },
+  "devDependencies": {
+    "web-ext": "^10.1.0"
+  }
+}
