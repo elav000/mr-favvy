@@ -6,6 +6,7 @@
 import { findMatch, loadRules, onRulesChanged, type Rule } from "./rules";
 import { emojiFaviconUrl } from "./emoji-favicon";
 
+// Pre-rename name kept so icons injected by older versions stay recognized.
 const MARKER = "data-favimoji";
 
 let rules: Rule[] = [];

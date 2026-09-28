@@ -9,7 +9,7 @@ CWS rendering note: the description field does **not** support Markdown. Line br
 > 50-character limit. Provided by `_locales/en/messages.json` (`extName`).
 
 ```
-Favimoji
+Mr. Favvy
 ```
 
 ## Summary
@@ -25,7 +25,7 @@ Replace any website's favicon with an emoji you choose. Add a URL pattern and an
 > 16,000-character limit. Paste as plain text — CWS does not render Markdown.
 
 ```
-Favimoji replaces the favicon of websites you choose with an emoji. Tell apart your tabs at a glance: give your issue tracker a 🔥, your staging environment a 🚧, and your bank a 💰.
+Mr. Favvy replaces the favicon of websites you choose with an emoji. Tell apart your tabs at a glance: give your issue tracker a 🔥, your staging environment a 🚧, and your bank a 💰.
 
 HOW IT WORKS
 
@@ -52,15 +52,15 @@ FEATURES
 
 PRIVACY
 
-Favimoji makes zero network requests. No analytics, no telemetry, no remote code, no favicon services. Your rules are stored in your browser's extension sync storage; page URLs are compared against your patterns locally and never leave the page.
+Mr. Favvy makes zero network requests. No analytics, no telemetry, no remote code, no favicon services. Your rules are stored in your browser's extension sync storage; page URLs are compared against your patterns locally and never leave the page.
 
-Full privacy policy: https://github.com/nx-alejandrolacasa/favimoji/blob/main/PRIVACY.md
+Full privacy policy: https://github.com/nx-alejandrolacasa/mr-favvy/blob/main/PRIVACY.md
 
 SOURCE AND LICENSE
 
 Open source under the MIT License.
 
-GitHub: https://github.com/nx-alejandrolacasa/favimoji
+GitHub: https://github.com/nx-alejandrolacasa/mr-favvy
 ```
 
 ## Category
@@ -88,7 +88,7 @@ CWS requires **exactly 1280×800** or **640×400**. At least one screenshot is r
 
 1. A tab strip with several emoji favicons applied (the money shot — shows the point instantly)
 2. The popup open with the prefilled pattern field and a few rules in the list
-3. Before/after of the same pinned tabs with and without Favimoji
+3. Before/after of the same pinned tabs with and without Mr. Favvy
 
 ## Promotional images (optional but recommended)
 
@@ -100,6 +100,12 @@ If we don't have these yet, skip them; they can be added in a later edit without
 ## Release notes
 
 > CWS shows version notes on the item's update. Paste the latest entry as plain text. Newest first.
+
+### v1.1.0
+
+```
+Favimoji is now Mr. Favvy, joining Mr. Pinny, Mr. Newtabby and Mr. Clicky. Same extension, new name: your rules are kept and everything works exactly as before. Still zero network requests.
+```
 
 ### v1.0.0
 

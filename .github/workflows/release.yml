@@ -36,9 +36,9 @@ jobs:
 
       - run: npm run build:${{ matrix.target }}
 
-      - run: npm run lint -w @favimoji/${{ matrix.target }} --if-present
+      - run: npm run lint -w @mr-favvy/${{ matrix.target }} --if-present
 
-      - run: npm run package -w @favimoji/${{ matrix.target }}
+      - run: npm run package -w @mr-favvy/${{ matrix.target }}
 
       - name: Attach ZIP to release
         if: github.event_name == 'release' || inputs.release_tag != ''
@@ -51,5 +51,5 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.release_tag == ''
         uses: actions/upload-artifact@v4
         with:
-          name: favimoji-${{ matrix.target }}
+          name: mr-favvy-${{ matrix.target }}
           path: packages/${{ matrix.target }}/web-ext-artifacts/*.zip

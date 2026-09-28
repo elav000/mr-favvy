@@ -42,12 +42,12 @@ No. All JavaScript executed by the extension is bundled inside the package at bu
 
 ## Data usage disclosure
 
-> CWS field: "What user data does your extension collect or use?" — Favimoji transmits nothing. The content script *reads* the page URL locally to match it against the user's rules, which Google may classify as **"Web history"-adjacent or "Website content"** under the conservative reading. Decision to confirm before submitting: with nothing collected, logged, or transmitted, all categories can defensibly be left unchecked; if you prefer the conservative reading, tick **Website content** (the page URL is read in-page) and rely on the certifications below. Either way the rationale below applies.
+> CWS field: "What user data does your extension collect or use?" — Mr. Favvy transmits nothing. The content script *reads* the page URL locally to match it against the user's rules, which Google may classify as **"Web history"-adjacent or "Website content"** under the conservative reading. Decision to confirm before submitting: with nothing collected, logged, or transmitted, all categories can defensibly be left unchecked; if you prefer the conservative reading, tick **Website content** (the page URL is read in-page) and rely on the certifications below. Either way the rationale below applies.
 
 Rationale for the reviewer (paste in the "Additional details" field if prompted):
 
 ```
-Favimoji does not collect or transmit any user data. It has no server,
+Mr. Favvy does not collect or transmit any user data. It has no server,
 no host permissions, and makes zero network requests. The content
 script reads the current page's URL in-page, solely to compare it
 against the user's own pattern rules; the URL is never stored, logged,
@@ -68,7 +68,7 @@ No analytics, telemetry, or crash reporting.
 ## Privacy policy URL
 
 ```
-https://github.com/nx-alejandrolacasa/favimoji/blob/main/PRIVACY.md
+https://github.com/nx-alejandrolacasa/mr-favvy/blob/main/PRIVACY.md
 ```
 
 ## Notes for reviewer
@@ -76,7 +76,7 @@ https://github.com/nx-alejandrolacasa/favimoji/blob/main/PRIVACY.md
 > Paste into the "Justification" / "Testing instructions" field on submission.
 
 ```
-Favimoji replaces the favicon of sites the user chooses with an emoji,
+Mr. Favvy replaces the favicon of sites the user chooses with an emoji,
 based on URL patterns defined in the popup.
 
 To test:
@@ -95,7 +95,7 @@ content-script match (http/https) exists only because the affected
 sites are chosen by the user at runtime via their rules.
 
 Build notes:
-- Source: https://github.com/nx-alejandrolacasa/favimoji (MIT license)
+- Source: https://github.com/nx-alejandrolacasa/mr-favvy (MIT license)
 - npm install && npm run build reproduces the package (esbuild
   monorepo, no env vars or secrets).
 - No analytics, telemetry, crash reporting, or remote code.
@@ -115,4 +115,4 @@ Build notes:
 - [ ] Justifications filled for `storage`, `activeTab`, and the content-script host access
 - [ ] Screenshots uploaded (1280×800 or 640×400, at least one — see LISTING_CHROME.md, none captured yet)
 - [ ] Store icon = 128×128 PNG (auto-uses `icons.128` from manifest, but the listing slot is separate — upload `packages/shared/assets/icons/icon.png` there too)
-- [ ] Package uploaded: `packages/chrome/web-ext-artifacts/favimoji-chrome-v1.0.0.zip`
+- [ ] Package uploaded: `packages/chrome/web-ext-artifacts/mr-favvy-chrome-v1.1.0.zip`

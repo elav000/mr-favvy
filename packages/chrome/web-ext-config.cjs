@@ -3,7 +3,7 @@
 module.exports = {
   sourceDir: "./dist",
   build: {
-    filename: "favimoji-chrome-v{version}.zip",
+    filename: "mr-favvy-chrome-v{version}.zip",
     overwriteDest: true,
   },
 };

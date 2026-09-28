@@ -4,7 +4,7 @@
   "version": "__VERSION__",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
-  "homepage_url": "https://github.com/nx-alejandrolacasa/favimoji",
+  "homepage_url": "https://github.com/nx-alejandrolacasa/mr-favvy",
   "developer": {
     "name": "Alejandro Lacasa",
     "url": "https://github.com/nx-alejandrolacasa"

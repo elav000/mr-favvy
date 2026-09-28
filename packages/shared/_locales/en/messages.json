@@ -1,7 +1,7 @@
 {
-  "extName": { "message": "Favimoji" },
+  "extName": { "message": "Mr. Favvy" },
   "extDescription": { "message": "Replace any website's favicon with an emoji of your choice, per URL pattern." },
-  "popupTitle": { "message": "Favimoji" },
+  "popupTitle": { "message": "Mr. Favvy" },
   "patternLabel": { "message": "URL pattern" },
   "patternPlaceholder": { "message": "example.com or example.com/path" },
   "emojiLabel": { "message": "Emoji" },

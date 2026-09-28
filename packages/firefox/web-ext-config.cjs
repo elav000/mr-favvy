@@ -3,7 +3,7 @@
 module.exports = {
   sourceDir: "./dist",
   build: {
-    filename: "favimoji-firefox-v{version}.zip",
+    filename: "mr-favvy-firefox-v{version}.zip",
     overwriteDest: true,
   },
 };

@@ -1,4 +1,4 @@
-# Favimoji
+# Mr. Favvy
 
 Browser extension (Chrome + Firefox, Manifest V3) that replaces website
 favicons with an emoji of your choice, based on URL patterns.
@@ -6,6 +6,10 @@ favicons with an emoji of your choice, based on URL patterns.
 Open the popup, add a pattern and an emoji, and every tab whose URL matches
 gets that emoji as its favicon — applied live, and kept in place even when
 the site swaps its own icon dynamically.
+
+Formerly **Favimoji** (renamed in v1.1.0). The Firefox add-on ID
+(`favimoji@nx-alejandrolacasa.github.io`) is intentionally unchanged so
+existing installs keep updating.
 
 ## Pattern syntax
 

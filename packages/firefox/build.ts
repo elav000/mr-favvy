@@ -87,7 +87,7 @@ async function main() {
   } else {
     await Promise.all(bundles.map((opts) => build(opts)));
     await validateDist(DIST, REQUIRED_DIST_FILES);
-    console.log(`Built @favimoji/firefox v${version} → ${path.relative(REPO_ROOT, DIST)}`);
+    console.log(`Built @mr-favvy/firefox v${version} → ${path.relative(REPO_ROOT, DIST)}`);
   }
 }
 

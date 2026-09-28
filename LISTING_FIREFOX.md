@@ -15,7 +15,7 @@ Replace any website's favicon with an emoji of your choice. Add a URL pattern an
 > Markdown is supported (basic). Paste into the AMO description field.
 
 ```markdown
-**Favimoji** replaces the favicon of websites you choose with an emoji. Tell apart your tabs at a glance: give your issue tracker a 🔥, your staging environment a 🚧, and your bank a 💰.
+**Mr. Favvy** replaces the favicon of websites you choose with an emoji. Tell apart your tabs at a glance: give your issue tracker a 🔥, your staging environment a 🚧, and your bank a 💰.
 
 **How it works**
 
@@ -38,15 +38,15 @@ Open the popup on any site, type a URL pattern and paste an emoji, and every tab
 
 **Privacy**
 
-Favimoji makes **zero network requests**. No analytics, no telemetry, no remote code, no favicon services. Your rules are stored in your browser's extension sync storage; page URLs are compared against your patterns locally and never leave the page.
+Mr. Favvy makes **zero network requests**. No analytics, no telemetry, no remote code, no favicon services. Your rules are stored in your browser's extension sync storage; page URLs are compared against your patterns locally and never leave the page.
 
-Full privacy policy: https://github.com/nx-alejandrolacasa/favimoji/blob/main/PRIVACY.md
+Full privacy policy: https://github.com/nx-alejandrolacasa/mr-favvy/blob/main/PRIVACY.md
 
 **Source & license**
 
 Open source under the MIT License.
 
-GitHub: https://github.com/nx-alejandrolacasa/favimoji
+GitHub: https://github.com/nx-alejandrolacasa/mr-favvy
 ```
 
 ## Categories
@@ -63,7 +63,7 @@ GitHub: https://github.com/nx-alejandrolacasa/favimoji
 > Paste into AMO's "Notes for reviewer" field on submission.
 
 ```
-Favimoji lets the user map URL patterns to emojis; a content script
+Mr. Favvy lets the user map URL patterns to emojis; a content script
 swaps the favicon <link> elements for a locally generated SVG data URL
 on pages whose URL matches one of the user's rules.
 
@@ -100,7 +100,7 @@ To test:
 
 ## Source code submission
 
-> AMO asks "Do you use any of the following in your extension?" — answer **Yes** (esbuild bundles multiple files into one). Upload a source zip generated from the release tag: `git archive --format=zip -o web-ext-artifacts/favimoji-<version>-source.zip v<version>`. Paste the following into the source-submission notes field:
+> AMO asks "Do you use any of the following in your extension?" — answer **Yes** (esbuild bundles multiple files into one). Upload a source zip generated from the release tag: `git archive --format=zip -o web-ext-artifacts/mr-favvy-<version>-source.zip v<version>`. Paste the following into the source-submission notes field:
 
 ```
 Requirements: Node.js 22.x (ships with npm 10). Any OS.
@@ -118,6 +118,12 @@ build is a plain esbuild bundle plus static asset copies.
 ## Release notes
 
 > Paste the latest entry into the version's "Release notes" / "What's new" field. Newest first.
+
+### v1.1.0
+
+```
+Favimoji is now Mr. Favvy, joining Mr. Pinny, Mr. Newtabby and Mr. Clicky. Same extension, new name: your rules are kept and everything works exactly as before. Still zero network requests.
+```
 
 ### v1.0.0
 
