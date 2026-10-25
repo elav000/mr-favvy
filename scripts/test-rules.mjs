@@ -14,6 +14,21 @@ assert(!m("https://notgithub.com/", "github.com"));
 assert(m("https://github.com/", "https://github.com"));
 assert(m("https://github.com/", "www.github.com"));
 
+// port-specific host patterns
+assert(m("http://nas.local:5001/", "nas.local:5001"));
+assert(!m("http://nas.local:5002/", "nas.local:5001"));
+assert(!m("http://nas.local/", "nas.local:5001"));
+assert(m("http://nas.local:5002/", "nas.local"));
+assert(m("http://nas.local:5001/app", "nas.local:5001/app"));
+assert(!m("http://nas.local:5002/app", "nas.local:5001/app"));
+
+const nasRules = [
+  { id: "nas-1", pattern: "nas.local:5001", emoji: "💾" },
+  { id: "nas-2", pattern: "nas.local:5002", emoji: "📺" },
+];
+assert.equal(findMatch(nasRules, "http://nas.local:5001/")?.emoji, "💾");
+assert.equal(findMatch(nasRules, "http://nas.local:5002/")?.emoji, "📺");
+
 // wildcard host
 assert(m("https://gist.github.com/", "*.github.com"));
 assert(!m("https://github.com/", "*.github.com"));
