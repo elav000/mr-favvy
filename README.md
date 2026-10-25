@@ -17,11 +17,16 @@ existing installs keep updating.
 | -------------------- | ------------------------------------------------ |
 | `github.com`         | `github.com` and any subdomain                   |
 | `*.github.com`       | subdomains of `github.com` (wildcard host)       |
+| `nas.local:8080`     | `nas.local` on port `8080` only                  |
 | `github.com/vercel`  | that path and anything under it                  |
 | `*`                  | any run of characters, anywhere in the pattern   |
 
 The first matching rule (in list order) wins. Rules sync via
 `storage.sync`, so they follow your browser profile.
+
+Port-specific patterns let you give services on the same NAS different
+emojis, for example `nas.local:5001` and `nas.local:5002`. When you open the
+popup on a non-default port, that port is included in the suggested pattern.
 
 ## Repo layout
 
