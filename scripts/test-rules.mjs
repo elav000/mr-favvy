@@ -14,6 +14,21 @@ assert(!m("https://notgithub.com/", "github.com"));
 assert(m("https://github.com/", "https://github.com"));
 assert(m("https://github.com/", "www.github.com"));
 
+// port-specific host patterns
+assert(m("http://host.local:5001/", "host.local:5001"));
+assert(!m("http://host.local:5002/", "host.local:5001"));
+assert(!m("http://host.local/", "host.local:5001"));
+assert(m("http://host.local:5002/", "host.local"));
+assert(m("http://host.local:5001/app", "host.local:5001/app"));
+assert(!m("http://host.local:5002/app", "host.local:5001/app"));
+
+const hostRules = [
+  { id: "host-1", pattern: "host.local:5001", emoji: "💾" },
+  { id: "host-2", pattern: "host.local:5002", emoji: "📺" },
+];
+assert.equal(findMatch(hostRules, "http://host.local:5001/")?.emoji, "💾");
+assert.equal(findMatch(hostRules, "http://host.local:5002/")?.emoji, "📺");
+
 // wildcard host
 assert(m("https://gist.github.com/", "*.github.com"));
 assert(!m("https://github.com/", "*.github.com"));
