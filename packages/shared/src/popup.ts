@@ -92,7 +92,9 @@ async function prefillPattern(): Promise<void> {
     if (!tab?.url) return;
     const url = new URL(tab.url);
     if (url.protocol !== "http:" && url.protocol !== "https:") return;
-    patternInput.value = url.hostname.replace(/^www\./, "");
+    patternInput.value = `${url.hostname.replace(/^www\./, "")}${
+      url.port ? `:${url.port}` : ""
+    }`;
   } catch {
     // Leave the field empty if the URL is unavailable.
   }

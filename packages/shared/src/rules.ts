@@ -4,6 +4,7 @@
 // page URL with these semantics:
 //   - "github.com"        → that host and any subdomain (www.github.com, …)
 //   - "*.github.com"      → wildcard host match
+//   - "github.com:8080"    → that host on port 8080
 //   - "github.com/vercel" → host + path prefix (matches /vercel and /vercel/…)
 //   - "*" matches any run of characters anywhere in the pattern
 // The first rule (in list order) that matches wins.
@@ -73,17 +74,30 @@ export function matchesPattern(url: URL, pattern: string): boolean {
   if (!p) return false;
 
   const host = url.hostname.toLowerCase();
-  if (!p.includes("/")) {
-    if (p.includes("*")) return wildcardRegExp(p).test(host);
-    return host === p || host.endsWith(`.${p}`);
-  }
+  const slash = p.indexOf("/");
+  const authority = slash < 0 ? p : p.slice(0, slash);
+  const path = slash < 0 ? "" : p.slice(slash + 1);
+  // A port in the pattern scopes the rule to that exact service. URL.port is
+  // empty for default ports, matching the browser's canonical URL behavior.
+  const portMatch = authority.match(/:(\d+)$/);
+  const patternPort = portMatch?.[1];
+  const patternHost = patternPort
+    ? authority.slice(0, -patternPort.length - 1)
+    : authority;
+  if (patternPort && url.port !== patternPort) return false;
+
+  const hostMatches = patternHost.includes("*")
+    ? wildcardRegExp(patternHost).test(host)
+    : host === patternHost || host.endsWith(`.${patternHost}`);
+  if (!hostMatches) return false;
+  if (slash < 0 || !path) return true;
 
   // Host+path pattern: prefix match on a path-segment boundary, so
   // "github.com/vercel" matches /vercel and /vercel/next.js but not /vercelx.
   // "www." is stripped from both sides (see normalizePattern).
   const bareHost = host.replace(/^www\./, "");
   const target = (bareHost + url.pathname).replace(/\/+$/, "");
-  const prefix = p.replace(/\/+$/, "");
+  const prefix = (patternHost.replace(/^www\./, "") + "/" + path).replace(/\/+$/, "");
   if (prefix.includes("*")) return wildcardRegExp(prefix, true).test(target);
   return target === prefix || target.startsWith(`${prefix}/`);
 }
