@@ -22,12 +22,12 @@ assert(m("http://host.local:5002/", "host.local"));
 assert(m("http://host.local:5001/app", "host.local:5001/app"));
 assert(!m("http://host.local:5002/app", "host.local:5001/app"));
 
-const nasRules = [
+const hostRules = [
   { id: "host-1", pattern: "host.local:5001", emoji: "💾" },
   { id: "host-2", pattern: "host.local:5002", emoji: "📺" },
 ];
-assert.equal(findMatch(nasRules, "http://host.local:5001/")?.emoji, "💾");
-assert.equal(findMatch(nasRules, "http://host.local:5002/")?.emoji, "📺");
+assert.equal(findMatch(hostRules, "http://host.local:5001/")?.emoji, "💾");
+assert.equal(findMatch(hostRules, "http://host.local:5002/")?.emoji, "📺");
 
 // wildcard host
 assert(m("https://gist.github.com/", "*.github.com"));
